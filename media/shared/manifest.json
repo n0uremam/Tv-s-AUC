@@ -1,0 +1,29 @@
+{
+  "items": [
+    { "type": "image", "src": "01.jpg", "duration": 15 },
+    { "type": "video", "src": "02.mp4" },
+    { "type": "image", "src": "03.jpg", "duration": 15 },
+    { "type": "video", "src": "04.mp4" },
+    { "type": "video", "src": "05.mp4" },
+    { "type": "video", "src": "06.mp4" },
+    { "type": "image", "src": "07.jpg", "duration": 15 },
+    { "type": "image", "src": "08.jpg", "duration": 15 },
+    { "type": "image", "src": "09.jpg", "duration": 15 },
+    { "type": "image", "src": "10.jpg", "duration": 15 },
+    { "type": "video", "src": "11.mp4" },
+    { "type": "video", "src": "12.mp4" },
+    { "type": "image", "src": "13.jpg", "duration": 15 },
+    { "type": "image", "src": "14.jpg", "duration": 15 },
+    { "type": "video", "src": "15.mp4" },
+    { "type": "video", "src": "16.mp4" },
+    { "type": "video", "src": "17.mp4" },
+    { "type": "video", "src": "18.mp4" }
+  ]
+}
+
+
+
+
+
+
+
