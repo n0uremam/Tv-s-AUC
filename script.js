@@ -373,10 +373,10 @@ var MANIFEST_REFRESH_MS = 3 * 60 * 60 * 1000; // manifest refresh every 3 hours
 
   // ===== TABLES (LIVE) =====
   var CSV_PROGRESS =
-    "https://docs.google.com/spreadsheets/d/e/2PACX-1vSKpulVdyocoyi3Vj-BHBG9aOcfsG-QkgLtwlLGjbWFy_YkTmiN5mOsiYfWS6_sqLNtS4hCie2c3JDH/pub?gid=2111665249&single=true&output=csv";
+    "https://docs.google.com/spreadsheets/d/e/2PACX-1vQX1ojIMJ_lzxRR6vSD-H4Vw-IqunKMRXUyZT-23nGZikVrigEVHRfhtOItUHtbnnF1FGUrjpHnkfLk/pubhtml?gid=2111665249&single=true&output=csv";
 
   var CSV_REVISIT =
-    "https://docs.google.com/spreadsheets/d/e/2PACX-1vSKpulVdyocoyi3Vj-BHBG9aOcfsG-QkgLtwlLGjbWFy_YkTmiN5mOsiYfWS6_sqLNtS4hCie2c3JDH/pub?gid=1236474828&single=true&output=csv";
+    "https://docs.google.com/spreadsheets/d/e/2PACX-1vQX1ojIMJ_lzxRR6vSD-H4Vw-IqunKMRXUyZT-23nGZikVrigEVHRfhtOItUHtbnnF1FGUrjpHnkfLk/pubhtml?gid=1391443977&single=true&output=csv";
 
   var progressBody = document.getElementById("progressBody");
   var revisitBody = document.getElementById("revisitBody");
@@ -534,9 +534,9 @@ var MANIFEST_REFRESH_MS = 3 * 60 * 60 * 1000; // manifest refresh every 3 hours
         for (var i = 0; i < rows.length; i++) {
           var r = rows[i];
           var status = (r[0] || "").trim(); // A
-          var name = (r[3] || "").trim();   // D
-          var car = (r[5] || "").trim();    // F
-          var color = (r[6] || "").trim();  // G
+          var name = (r[4] || "").trim();   // D
+          var car = (r[6] || "").trim();    // F
+          var color = (r[7] || "").trim();  // G
           if (!name) continue;
           data.push({ status: status, name: name, car: car, color: color });
         }
@@ -572,4 +572,5 @@ var MANIFEST_REFRESH_MS = 3 * 60 * 60 * 1000; // manifest refresh every 3 hours
   debug("Ready ✓");
 
 })();
+
 
