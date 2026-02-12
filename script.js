@@ -110,7 +110,7 @@
 
   // ===== LIVE UPDATE SETTINGS =====
   var TABLE_REFRESH_MS = 60 * 1000; // tables live refresh
-var MANIFEST_REFRESH_MS = 3 * 60 * 60 * 1000; // manifest refresh every 3 hours
+  var MANIFEST_REFRESH_MS = 3 * 60 * 60 * 1000; // manifest refresh every 3 hours
 
   // ===== MEDIA PLAYER =====
   var MEDIA_PATH = "media/shared/";
@@ -372,11 +372,12 @@ var MANIFEST_REFRESH_MS = 3 * 60 * 60 * 1000; // manifest refresh every 3 hours
   setInterval(function () { loadManifest(true); }, MANIFEST_REFRESH_MS);
 
   // ===== TABLES (LIVE) =====
+  // IMPORTANT: use /pub?output=csv  (NOT pubhtml)
   var CSV_PROGRESS =
-    "https://docs.google.com/spreadsheets/d/e/2PACX-1vQX1ojIMJ_lzxRR6vSD-H4Vw-IqunKMRXUyZT-23nGZikVrigEVHRfhtOItUHtbnnF1FGUrjpHnkfLk/pubhtml?gid=2111665249&single=true&output=csv";
+    "https://docs.google.com/spreadsheets/d/e/2PACX-1vQX1ojIMJ_lzxRR6vSD-H4Vw-IqunKMRXUyZT-23nGZikVrigEVHRfhtOItUHtbnnF1FGUrjpHnkfLk/pub?gid=2111665249&single=true&output=csv";
 
   var CSV_REVISIT =
-    "https://docs.google.com/spreadsheets/d/e/2PACX-1vQX1ojIMJ_lzxRR6vSD-H4Vw-IqunKMRXUyZT-23nGZikVrigEVHRfhtOItUHtbnnF1FGUrjpHnkfLk/pubhtml?gid=1391443977&single=true&output=csv";
+    "https://docs.google.com/spreadsheets/d/e/2PACX-1vQX1ojIMJ_lzxRR6vSD-H4Vw-IqunKMRXUyZT-23nGZikVrigEVHRfhtOItUHtbnnF1FGUrjpHnkfLk/pub?gid=1391443977&single=true&output=csv";
 
   var progressBody = document.getElementById("progressBody");
   var revisitBody = document.getElementById("revisitBody");
@@ -389,8 +390,8 @@ var MANIFEST_REFRESH_MS = 3 * 60 * 60 * 1000; // manifest refresh every 3 hours
   var revisitPage = 0;
 
   // ✅ Added 2 more rows each
-  var PROGRESS_ROWS_PER_PAGE = 9; // was 7
-  var REVISIT_ROWS_PER_PAGE = 8;  // was 6
+  var PROGRESS_ROWS_PER_PAGE = 9;
+  var REVISIT_ROWS_PER_PAGE = 8;
   var PAGE_SWITCH_MS = 3500;
 
   var progressTimer = null;
@@ -499,6 +500,7 @@ var MANIFEST_REFRESH_MS = 3 * 60 * 60 * 1000; // manifest refresh every 3 hours
         var rows = parseCSV(res).slice(1);
         var data = [];
 
+        // PROGRESS: take E,G,I,J,K => index 4,6,8,9,10
         for (var i = 0; i < rows.length; i++) {
           var r = rows[i];
           var customer = (r[4] || "").trim(); // E
@@ -513,7 +515,7 @@ var MANIFEST_REFRESH_MS = 3 * 60 * 60 * 1000; // manifest refresh every 3 hours
         progressData = data;
         progressPage = 0;
         startPaging();
-        debug("Progress live rows=" + progressData.length);
+        debug("Progress OK rows=" + progressData.length);
       } catch (e) {
         if (boardMeta) boardMeta.textContent = "Error";
       }
@@ -531,12 +533,13 @@ var MANIFEST_REFRESH_MS = 3 * 60 * 60 * 1000; // manifest refresh every 3 hours
         var rows = parseCSV(res).slice(1);
         var data = [];
 
+        // REVISIT: ONLY A,D,F,G => index 0,3,5,6
         for (var i = 0; i < rows.length; i++) {
           var r = rows[i];
           var status = (r[0] || "").trim(); // A
-          var name = (r[4] || "").trim();   // D
-          var car = (r[6] || "").trim();    // F
-          var color = (r[7] || "").trim();  // G
+          var name = (r[3] || "").trim();   // D
+          var car = (r[5] || "").trim();    // F
+          var color = (r[6] || "").trim();  // G
           if (!name) continue;
           data.push({ status: status, name: name, car: car, color: color });
         }
@@ -544,7 +547,7 @@ var MANIFEST_REFRESH_MS = 3 * 60 * 60 * 1000; // manifest refresh every 3 hours
         revisitData = data;
         revisitPage = 0;
         startPaging();
-        debug("Revisit live rows=" + revisitData.length);
+        debug("Revisit OK rows=" + revisitData.length);
       } catch (e) {
         if (revisitMeta) revisitMeta.textContent = "Error";
       }
@@ -572,5 +575,3 @@ var MANIFEST_REFRESH_MS = 3 * 60 * 60 * 1000; // manifest refresh every 3 hours
   debug("Ready ✓");
 
 })();
-
-
