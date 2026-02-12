@@ -537,9 +537,9 @@
         for (var i = 0; i < rows.length; i++) {
           var r = rows[i];
           var status = (r[0] || "").trim(); // A
-          var name = (r[3] || "").trim();   // D
-          var car = (r[5] || "").trim();    // F
-          var color = (r[6] || "").trim();  // G
+          var name = (r[4] || "").trim();   // D
+          var car = (r[6] || "").trim();    // F
+          var color = (r[7] || "").trim();  // G
           if (!name) continue;
           data.push({ status: status, name: name, car: car, color: color });
         }
