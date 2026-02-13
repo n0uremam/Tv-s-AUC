@@ -18,9 +18,11 @@
     { "type": "video", "src": "16.mp4" },
     { "type": "video", "src": "17.mp4" },
     { "type": "video", "src": "18.mp4" }, 
-    { "type": "video", "src": "19.mp4" }
+    { "type": "video", "src": "19.mp4" }, 
+    { "type": "image", "src": "20.jpg", "duration": 15 } 
   ]
 }
+
 
 
 
