@@ -238,7 +238,7 @@
     var v = document.createElement("video");
     v.src = MEDIA_PATH + src + "?t=" + Date.now();
     v.autoplay = true;
-    v.muted = true;
+    v.muted = false;
     v.playsInline = true;
     v.preload = "auto";
     v.setAttribute("webkit-playsinline", "true");
@@ -575,3 +575,4 @@
   debug("Ready ✓");
 
 })();
+
