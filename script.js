@@ -390,7 +390,7 @@
   var revisitPage = 0;
 
   // ✅ Added 2 more rows each
-  var PROGRESS_ROWS_PER_PAGE = 9;
+  var PROGRESS_ROWS_PER_PAGE = 8;
   var REVISIT_ROWS_PER_PAGE = 8;
   var PAGE_SWITCH_MS = 3500;
 
@@ -575,4 +575,5 @@
   debug("Ready ✓");
 
 })();
+
 
