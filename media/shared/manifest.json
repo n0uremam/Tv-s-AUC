@@ -1,35 +1,25 @@
 {
   "items": [
     { "type": "image", "src": "01.jpg", "duration": 15 },
-    { "type": "video", "src": "02.mp4" },
+    { "type": "video", "src": "02.mp4", "duration": 68 },
     { "type": "image", "src": "03.jpg", "duration": 15 },
-    { "type": "video", "src": "04.mp4" },
-    { "type": "video", "src": "05.mp4" },
-    { "type": "video", "src": "06.mp4" },
+    { "type": "video", "src": "04.mp4", "duration": 7 },
+    { "type": "video", "src": "05.mp4", "duration": 9 },
+    { "type": "video", "src": "06.mp4", "duration": 27 },
     { "type": "image", "src": "07.jpg", "duration": 15 },
     { "type": "image", "src": "08.jpg", "duration": 15 },
     { "type": "image", "src": "09.jpg", "duration": 15 },
     { "type": "image", "src": "10.jpg", "duration": 15 },
-    { "type": "video", "src": "11.mp4" },
-    { "type": "video", "src": "12.mp4" },
+    { "type": "video", "src": "11.mp4", "duration": 220 },
+    { "type": "video", "src": "12.mp4", "duration": 29 },
     { "type": "image", "src": "13.jpg", "duration": 15 },
     { "type": "image", "src": "14.jpg", "duration": 15 },
-    { "type": "video", "src": "15.mp4" },
-    { "type": "video", "src": "16.mp4" },
-    { "type": "video", "src": "17.mp4" },
-    { "type": "video", "src": "18.mp4" }, 
-    { "type": "video", "src": "19.mp4" }, 
-    { "type": "image", "src": "20.jpg", "duration": 15 }, 
-    { "type": "video", "src": "21.mp4" }
+    { "type": "video", "src": "15.mp4", "duration": 29 },
+    { "type": "video", "src": "16.mp4", "duration": 35 },
+    { "type": "video", "src": "17.mp4", "duration": 62 },
+    { "type": "video", "src": "18.mp4", "duration": 23 },
+    { "type": "video", "src": "19.mp4", "duration": 35 },
+    { "type": "image", "src": "20.jpg", "duration": 15 },
+    { "type": "video", "src": "21.mp4", "duration": 76 }
   ]
 }
-
-
-
-
-
-
-
-
-
-
