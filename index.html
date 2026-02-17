@@ -4,16 +4,13 @@
   <meta charset="utf-8"/>
   <meta name="viewport" content="width=device-width, initial-scale=1"/>
   <title>Abdo El Amir TV</title>
-
   <link rel="preconnect" href="https://fonts.googleapis.com">
   <link rel="preconnect" href="https://fonts.gstatic.com" crossorigin>
   <link href="https://fonts.googleapis.com/css2?family=Roboto:wght@300;400;600;700;900&display=swap" rel="stylesheet">
   <link rel="stylesheet" href="styles.css"/>
 </head>
-
 <body>
   <div class="app">
-
     <div class="topbar">
       <div class="brand">
         <img class="brand-logo" id="brandLogo" src="media/logo.png" alt="logo">
@@ -22,7 +19,6 @@
           <div class="brand-sub">The 5th Settlement · Waiting Room</div>
         </div>
       </div>
-
       <div class="chips">
         <div class="chip">
           <div class="chip-label">Date</div>
@@ -36,40 +32,27 @@
           <div class="chip-label">Weather</div>
           <div class="chip-value"><span id="weatherCairo">--</span></div>
         </div>
-
         <button class="btn" id="refreshBtn" type="button">Refresh</button>
       </div>
     </div>
-
     <div class="grid">
-
-      <!-- LEFT: MEDIA -->
       <div class="media-card">
         <div class="media-frame" id="mediaFrame">
-          <!-- LOGO fallback inside media (instead of banner) -->
           <div class="media-logo-fallback" id="mediaLogoFallback" aria-hidden="true">
             <img src="media/logo.png" alt="">
           </div>
-
           <div class="media-status" id="mediaStatus">Loading media…</div>
         </div>
-
-        <!-- Caption now has the BANNER behind the text -->
         <div class="media-caption media-caption-banner">
           <img class="caption-banner-img" src="media/banner.png" alt="">
-
           <div class="caption-overlay"></div>
-
           <div class="caption-text">
             <div class="headline">Trusted for over 50 years in Egypt</div>
             <div class="subline">Cars protective films · UAE &amp; KSA Soon</div>
           </div>
         </div>
       </div>
-
-      <!-- RIGHT: TABLES -->
       <div class="right-card">
-
         <div class="panel" id="progressPanel">
           <div class="panel-head">
             <div class="panel-title">IN PROGRESS</div>
@@ -93,13 +76,11 @@
             </table>
           </div>
         </div>
-
         <div class="panel" id="revisitPanel">
           <div class="panel-head">
             <div class="panel-title">REVISIT BOOKING TODAY</div>
             <div class="panel-meta" id="revisitMeta">Loading…</div>
           </div>
-
           <div class="table-wrap">
             <table class="table">
               <thead>
@@ -116,15 +97,8 @@
             </table>
           </div>
         </div>
-
       </div>
     </div>
-
-    <div id="debugBox" class="debug">Booting…</div>
-  </div>
-
   <script src="script.js"></script>
 </body>
 </html>
-
-
