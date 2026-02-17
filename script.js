@@ -556,8 +556,8 @@
   var progressPage = 0;
   var revisitPage = 0;
 
-  var PROGRESS_ROWS_PER_PAGE = 8;
-  var REVISIT_ROWS_PER_PAGE = 8;
+  var PROGRESS_ROWS_PER_PAGE = 9;
+  var REVISIT_ROWS_PER_PAGE = 10;
   var PAGE_SWITCH_MS = 3500;
 
   var progressTimer = null;
@@ -749,3 +749,4 @@
   debug("Ready ✓ (Data Saving + Synced Media)");
 
 })();
+
