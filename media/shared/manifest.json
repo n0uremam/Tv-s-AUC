@@ -20,6 +20,13 @@
     { "type": "video", "src": "18.mp4", "duration": 23 },
     { "type": "video", "src": "19.mp4", "duration": 35 },
     { "type": "image", "src": "20.jpg", "duration": 15 },
-    { "type": "video", "src": "21.mp4", "duration": 76 }
+    { "type": "video", "src": "21.mp4", "duration": 76 }, 
+    { "type": "video", "src": "22.mp4", "duration": 37 }, 
+    { "type": "video", "src": "23.mp4", "duration": 67 },
+    { "type": "video", "src": "24.mp4", "duration": 77 },
+    { "type": "video", "src": "25.mp4", "duration": 180 },
+    { "type": "video", "src": "26.mp4", "duration": 85 }, 
+    { "type": "video", "src": "27.mp4", "duration": 11 }
   ]
 }
+
