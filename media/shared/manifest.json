@@ -26,7 +26,9 @@
     { "type": "video", "src": "24.mp4", "duration": 77 },
     { "type": "video", "src": "25.mp4", "duration": 180 },
     { "type": "video", "src": "26.mp4", "duration": 85 }, 
-    { "type": "video", "src": "27.mp4", "duration": 11 }
+    { "type": "video", "src": "27.mp4", "duration": 11 }, 
+    { "type": "video", "src": "28.mp4", "duration": 26 } 
   ]
 }
+
 
