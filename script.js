@@ -554,9 +554,9 @@
         for (var i = 0; i < rows.length; i++) {
           var r = rows[i];
           var status = (r[0] || "").trim();
-          var name = (r[3] || "").trim();
-          var car = (r[5] || "").trim();
-          var color = (r[6] || "").trim();
+          var name = (r[4] || "").trim();
+          var car = (r[6] || "").trim();
+          var color = (r[7] || "").trim();
           if (!name) continue;
           data.push({ status: status, name: name, car: car, color: color });
         }
@@ -586,3 +586,4 @@
   setInterval(loadRevisit, TABLE_REFRESH_MS);
   debug("Ready ✓");
 })();
+
