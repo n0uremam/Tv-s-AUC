@@ -69,7 +69,7 @@
   setInterval(loadWeather, 10 * 60 * 1000);
   var TABLE_REFRESH_MS = 5 * 60 * 1000;           // tables refresh every 5 min
   var MANIFEST_REFRESH_MS = 3 * 60 * 60 * 1000;   // manifest refresh every 3 hours
-  var RESYNC_MEDIA_MS = 10 * 60 * 1000;           // re-sync playback every 10 min
+  var RESYNC_MEDIA_MS = 30 * 60 * 1000;           // re-sync playback every 10 min
   var MEDIA_PATH = "/media/shared/";
   var MANIFEST_URL = MEDIA_PATH + "manifest.json";
   var frame = document.getElementById("mediaFrame");
@@ -176,7 +176,8 @@
     "25.mp4": 180,
     "26.mp4": 85,
     "27.mp4": 11,
-    "28.mp4": 26 
+    "28.mp4": 26,
+    "29.mp4": 67
   };
   function itemDurationMs(item) {
     if (!item) return 0;
@@ -587,5 +588,6 @@
   setInterval(loadRevisit, TABLE_REFRESH_MS);
   debug("Ready ✓");
 })();
+
 
 
