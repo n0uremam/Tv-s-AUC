@@ -177,7 +177,8 @@
     "26.mp4": 85,
     "27.mp4": 11,
     "28.mp4": 26,
-    "29.mp4": 67
+    "29.mp4": 67, 
+    "30.mp4": 36
   };
   function itemDurationMs(item) {
     if (!item) return 0;
@@ -588,6 +589,7 @@
   setInterval(loadRevisit, TABLE_REFRESH_MS);
   debug("Ready ✓");
 })();
+
 
 
 
